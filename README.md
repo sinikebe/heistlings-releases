@@ -31,7 +31,7 @@ Un nouveau voleur commence sans sens ni accessoire. Les réussites d’entraîne
 
 Les icônes des compteurs et les boutons d’information donnent leur explication au clic. Fermez l’aide avec **×**, **Échap** ou en cliquant ailleurs.
 
-Dans **Évaluation**, **Essayer un exemple** charge un exemple issu d’un entraînement réel. Le rythme **×16** accélère vos propres essais. Les progrès ne sont pas garantis à chaque génération ; **Évaluer sur 20 salles** permet de mesurer les livraisons sans poursuivre l’apprentissage.
+Dans **Évaluation**, **Essayer un exemple** charge un exemple issu d’un entraînement réel. Dans **Entraînement**, le rythme **×1** joue une action par seconde avec déplacement animé. Les modes **Rapide** et **Accéléré** conservent leurs cadences ; leur multiplicateur réel apparaît après mesure dans ce mode. Les progrès ne sont pas garantis à chaque génération ; **Évaluer sur 20 salles** permet de mesurer les livraisons sans poursuivre l’apprentissage.
 
 Le prototype contient une créature, un butin et un refuge. Les gardes et les équipes ne sont pas encore présents.
 
