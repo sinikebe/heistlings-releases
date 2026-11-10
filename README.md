@@ -19,21 +19,21 @@ La [page de la version dev](https://github.com/sinikebe/heistlings-releases/rele
 
 ## Mettre à jour depuis le jeu
 
-Le launcher recherche les mises à jour au démarrage. Depuis l’atelier, le bouton **Mises à jour** le rouvre en mettant la séance en pause. Vous pouvez vérifier, télécharger et installer la mise à jour proposée. La séance complète est sauvegardée automatiquement avant installation et redémarrage. Après réouverture, elle est restaurée en pause ; **Reprendre l’entraînement** poursuit la même population et le même essai. Une erreur de sauvegarde suspend la mise à jour sans fermer la séance.
+Le launcher recherche les mises à jour au démarrage. Depuis l’atelier, le bouton **Mises à jour** le rouvre en mettant la séance en pause. Vous pouvez vérifier, télécharger et installer la mise à jour proposée. Les trois voleurs sont sauvegardés automatiquement avant installation et redémarrage. Après réouverture, elle est restaurée en pause ; **Reprendre l’entraînement** poursuit la même population et le même essai. Une erreur de sauvegarde suspend la mise à jour sans fermer la séance.
 
 Le launcher vérifie les téléchargements avec SHA-256. Il reçoit uniquement les mises à jour du canal de votre application : Dev ou Joueurs.
 
 ## Premier essai
 
-Le dock compact reste fixé au bas de l’écran et relie trois espaces : **Mon voleur** pour choisir vue, odorat et accessoire ; **Entraînement** pour apprendre dans une salle de 8 × 6 cases ; **Évaluation** pour observer une copie du voleur sans modifier son apprentissage.
+Le dock relie **Entraînement**, **Campagne** et **Mes voleurs**. Trois emplacements permettent de créer, sélectionner et supprimer des voleurs indépendants. Le voleur sélectionné conserve son cerveau, son expérience, ses objectifs, ses compétences et sa campagne.
 
-Un nouveau voleur commence sans sens ni accessoire. Les réussites d’entraînement débloquent la vue (premier butin récupéré), l’odorat (première livraison), la boussole (cinq salles différentes livrées) et la loupe (trois salles avec obstacles livrées). Changer son équipement conserve les poids appris. **La case avec l’œil**, dans l’en-tête de la salle, montre le champ de vision, les odeurs et la direction de la boussole ; les repères grisés ne sont visibles que par le joueur.
+Choisissez ses **Objectifs d’entraînement** : ramasser, livrer, respecter une limite de pas et/ou de collisions. Chaque essai terminé qui satisfait les conditions donne **10 XP**, soit **un point à répartir dans l’arbre**. Les organes acquis restent actifs ; ils ne s’équipent plus. Loupe et boussole restent des accessoires à débloquer.
 
-Les icônes des compteurs et les boutons d’information donnent leur explication au clic. Fermez l’aide avec **×**, **Échap** ou en cliquant ailleurs.
+L’apprentissage continue sur les trois écrans avec une charge plafonnée. La salle observe un replay indépendant : **×1 = une action rejouée par seconde**. La pause du replay est distincte de celle de l’apprentissage. Les icônes expliquent leur rôle au clic et la case avec l’œil affiche les perceptions.
 
-Dans **Évaluation**, **Essayer un exemple** charge un exemple issu d’un entraînement réel. Dans **Entraînement**, le rythme **×1** rejoue une action enregistrée par seconde avec déplacement animé. Les simulations continuent indépendamment, aussi sur les autres écrans, avec une charge plafonnée. **Pause du replay** et **Pause apprentissage** contrôlent séparément la lecture et le calcul. Le replay en cours va à son terme, puis le dernier essai terminé est choisi. Les modes **Rapide** et **Accéléré** conservent leurs cadences ; leur multiplicateur réel apparaît après mesure dans ce mode. Les progrès ne sont pas garantis à chaque génération ; **Évaluer sur 20 salles** permet de mesurer les livraisons sans poursuivre l’apprentissage.
+**Premier butin**, la première campagne, utilise une carte fixe de **8 × 6**, sans obstacle intérieur ni garde. Récupérez le butin puis rapportez-le au refuge avec une copie du cerveau de votre voleur. La réussite reste enregistrée pour lui.
 
-Le prototype contient une créature, un butin et un refuge. Les gardes et les équipes ne sont pas encore présents.
+Une ancienne séance est conservée dans le premier emplacement. Aucun ZIP ni installation de Godot n’est nécessaire ; le guide téléchargeable avec la release détaille les commandes.
 
 ## Signaler un problème
 
