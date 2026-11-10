@@ -19,13 +19,15 @@ La [page de la version dev](https://github.com/sinikebe/heistlings-releases/rele
 
 ## Mettre à jour depuis le jeu
 
-Le launcher recherche les mises à jour au démarrage. Depuis l’atelier, le bouton **Mises à jour** le rouvre en mettant la séance en pause. Vous pouvez vérifier, télécharger et installer la mise à jour proposée. Revenir à l’atelier conserve la séance ; une installation peut redémarrer l’application, donc utilisez **Sauvegarder le voleur** avant de la lancer.
+Le launcher recherche les mises à jour au démarrage. Depuis l’atelier, le bouton **Mises à jour** le rouvre en mettant la séance en pause. Vous pouvez vérifier, télécharger et installer la mise à jour proposée. La séance complète est sauvegardée automatiquement avant installation et redémarrage. Après réouverture, elle est restaurée en pause ; **Reprendre l’entraînement** poursuit la même population et le même essai. Une erreur de sauvegarde suspend la mise à jour sans fermer la séance.
 
 Le launcher vérifie les téléchargements avec SHA-256. Il reçoit uniquement les mises à jour du canal de votre application : Dev ou Joueurs.
 
 ## Premier essai
 
 Le dock relie trois écrans : **Mon voleur** pour choisir vue, odorat et accessoire ; **Entraînement** pour apprendre dans une salle de 8 × 6 cases ; **Évaluation** pour observer une copie du voleur sans modifier son apprentissage.
+
+Un nouveau voleur commence sans sens ni accessoire. Les réussites d’entraînement débloquent la vue (premier butin récupéré), l’odorat (première livraison), la boussole (cinq salles différentes livrées) et la loupe (trois salles avec obstacles livrées). Changer son équipement conserve les poids appris. **Voir les perceptions** montre le champ de vision, les odeurs et la direction de la boussole ; les repères grisés ne sont visibles que par le joueur.
 
 Dans **Évaluation**, **Essayer un voleur entraîné** charge un exemple issu d’un entraînement réel. Le rythme **×16** accélère vos propres essais. Les progrès ne sont pas garantis à chaque génération ; **Évaluer sur 20 salles** permet de mesurer les livraisons sans poursuivre l’apprentissage.
 
