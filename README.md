@@ -29,7 +29,9 @@ Le dock relie **Entraînement**, **Campagne** et **Mes voleurs**. Trois emplacem
 
 Choisissez ses **Objectifs d’entraînement** : ramasser, livrer, respecter une limite de pas et/ou de collisions. Chaque essai terminé qui satisfait les conditions donne **10 XP**, soit **un point à répartir dans l’arbre**. Les organes acquis restent actifs ; ils ne s’équipent plus. Loupe et boussole restent des accessoires à débloquer.
 
-L’apprentissage continue sur les trois écrans avec une charge plafonnée. La salle observe un replay indépendant : **×1 = une action rejouée par seconde**. La pause du replay est distincte de celle de l’apprentissage. Les icônes expliquent leur rôle au clic et la case avec l’œil affiche les perceptions.
+La salle affiche uniquement un replay avec son identité et sa barre de lecture : **×1, ×4 ou ×16 = 1, 4 ou 16 actions rejouées par seconde**, avec déplacements animés. Un halo signale une attente et une croix ambre une collision. Le replay va au bout, puis choisit le dernier essai terminé. Sa pause est distincte de celle de l’apprentissage.
+
+L’apprentissage continue sur les trois écrans avec **la moitié du budget de calcul disponible par défaut**. Activez **Boost** pour utiliser le maximum disponible tout en gardant une marge pour l’interface. Ce partage porte sur le moteur de simulation ; ce n’est pas un quota global de tous les cœurs de votre PC. Les icônes expliquent leur rôle au clic et la case avec l’œil affiche les perceptions.
 
 **Premier butin**, la première campagne, utilise une carte fixe de **8 × 6**, sans obstacle intérieur ni garde. Récupérez le butin puis rapportez-le au refuge avec une copie du cerveau de votre voleur. La réussite reste enregistrée pour lui.
 
