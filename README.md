@@ -1,61 +1,40 @@
 # Heistlings — téléchargements
 
-Heistlings est un prototype de jeu où de petites créatures apprennent à récupérer
-un butin et revenir au refuge. Vous préparez les exercices, lancez l'entraînement
-et observez les comportements qui apparaissent.
+Heistlings est un prototype où de petites créatures apprennent à récupérer un butin puis à rejoindre leur refuge. Vous équipez votre voleur, lancez son entraînement et observez ce qu’il a appris.
 
-Ce dépôt est destiné aux versions Windows à télécharger. Les sources du jeu sont
-conservées dans un dépôt privé.
+Ce dépôt public contient les applications Windows et les fichiers de mise à jour. Les sources du jeu sont conservées dans un dépôt privé.
 
-## Télécharger et jouer
+## Télécharger
 
-Consultez [les versions disponibles](https://github.com/sinikebe/heistlings-releases/releases).
-La [préversion de développement](https://github.com/sinikebe/heistlings-releases/releases/tag/branch-dev)
-sert aux essais. Si aucune version n'apparaît encore, la première publication est
-en préparation.
+**[Télécharger Heistlings.exe — Dev](https://github.com/sinikebe/heistlings-releases/releases/download/branch-dev/Heistlings.exe)**
 
-1. Dans les fichiers de la release, téléchargez l'archive **Heistlings…Windows.zip**.
-2. Extrayez tout le ZIP dans un dossier où vous pouvez écrire.
-3. Ouvrez **Heistlings.exe**, puis choisissez **Entrer dans le labo**.
+Le canal **Dev** reçoit les nouveautés pour les essayer et les valider. La version **Joueurs** sera publiée séparément après cette validation. Les deux canaux auront leurs propres mises à jour et sauvegardes.
 
-Vous n'avez pas besoin d'installer Godot ni de créer un compte. Le guide inclus dans
-l'archive explique les commandes. Les fichiers `Source code` proposés automatiquement
-par GitHub contiennent la documentation de ce dépôt ; utilisez le ZIP Windows pour jouer.
+1. Enregistrez **Heistlings.exe** dans un dossier accessible en écriture, par exemple un dossier Heistlings Dev dans vos Documents.
+2. Lancez directement cet exécutable, puis choisissez **Entrer dans le labo**.
 
-Le launcher peut récupérer les mises à jour du canal de votre version lorsqu'elles
-sont disponibles. Les versions de développement suivent `branch-dev` et utilisent
-des sauvegardes distinctes des futures versions stables. Le fichier
-`content-desktop.pck` est destiné au mécanisme de mise à jour ; le ZIP suffit à
-l'installation du jeu.
+Aucun ZIP, installation de Godot ou compte n’est nécessaire. Le jeu et son launcher sont intégrés à l’exécutable. Le [guide de premier essai](https://github.com/sinikebe/heistlings-releases/releases/download/branch-dev/README.md) explique les commandes.
+
+La [page de la version dev](https://github.com/sinikebe/heistlings-releases/releases/tag/branch-dev) donne les détails et les fichiers de contrôle. Les fichiers `.pck` et `manifest.json` sont utilisés par le launcher ; vous n’avez pas à les installer. Les archives `Source code` ajoutées par GitHub ne sont pas le jeu.
+
+## Mettre à jour depuis le jeu
+
+Le launcher recherche les mises à jour au démarrage. Depuis l’atelier, le bouton **Mises à jour** le rouvre en mettant la séance en pause. Vous pouvez vérifier, télécharger et installer la mise à jour proposée. Revenir à l’atelier conserve la séance ; une installation peut redémarrer l’application, donc utilisez **Sauvegarder le voleur** avant de la lancer.
+
+Le launcher vérifie les téléchargements avec SHA-256. Il reçoit uniquement les mises à jour du canal de votre application : Dev ou Joueurs.
 
 ## Premier essai
 
-Cliquez sur **Exemple entraîné** pour observer immédiatement une créature issue d'un
-entraînement réel. Pour commencer votre propre expérience, choisissez un exercice,
-lancez l'entraînement et essayez **×16**. **Comparer au début** permet de voir ce qui
-a changé. **Évaluer sur 20 salles** mesure le réseau observé sans poursuivre son
-apprentissage.
+Le dock relie trois écrans : **Mon voleur** pour choisir vue, odorat et accessoire ; **Entraînement** pour apprendre dans une salle de 8 × 6 cases ; **Évaluation** pour observer une copie du voleur sans modifier son apprentissage.
 
-Le prototype utilise un réseau neuronal dont les poids évoluent entre les
-générations. Les progrès ne sont pas garantis à chaque génération. Il comprend
-une créature, un butin, un refuge et trois familles de salles ; les gardes et les
-équipes ne sont pas encore présents.
+Dans **Évaluation**, **Essayer un voleur entraîné** charge un exemple issu d’un entraînement réel. Le rythme **×16** accélère vos propres essais. Les progrès ne sont pas garantis à chaque génération ; **Évaluer sur 20 salles** permet de mesurer les livraisons sans poursuivre l’apprentissage.
 
-Les premières expériences atteignent 69,2 % de livraisons en moyenne sur cinq
-entraînements. Le seuil de fiabilité visé n'est atteint que sur trois essais sur
-cinq : ce prototype reste en développement. Le bilan et la provenance du modèle
-d'exemple accompagnent les téléchargements.
+Le prototype contient une créature, un butin et un refuge. Les gardes et les équipes ne sont pas encore présents.
 
 ## Signaler un problème
 
-Ouvrez une [issue](https://github.com/sinikebe/heistlings-releases/issues) en précisant
-la version téléchargée, votre version de Windows, l'exercice et les étapes permettant
-de retrouver le problème. Le numéro de salle et une capture sont utiles pour un
-problème de comportement.
+Ouvrez une [issue](https://github.com/sinikebe/heistlings-releases/issues) en précisant le canal et la version de l’application, votre version de Windows, l’écran concerné et les étapes permettant de retrouver le problème. Pour le comportement du voleur, ajoutez la salle, les organes et l’accessoire utilisés.
 
 ## Mentions tierces
 
-Le jeu utilise [Godot](https://godotengine.org/) et le
-[launcher de sinikebe](https://github.com/sinikebe/godot-launcher-template).
-Leurs licences et notices sont incluses dans l'archive. Ces licences tierces
-ne constituent pas une licence de publication des sources du jeu.
+Le jeu utilise [Godot](https://godotengine.org/) et le [launcher de sinikebe](https://github.com/sinikebe/godot-launcher-template). Leurs licences et notices sont intégrées à l’exécutable, consultables via **Mentions légales**, et également disponibles dans les fichiers de release. Ces licences tierces ne constituent pas une licence de publication des sources du jeu.
