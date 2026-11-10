@@ -25,11 +25,13 @@ Le launcher vérifie les téléchargements avec SHA-256. Il reçoit uniquement l
 
 ## Premier essai
 
-Le dock relie trois écrans : **Mon voleur** pour choisir vue, odorat et accessoire ; **Entraînement** pour apprendre dans une salle de 8 × 6 cases ; **Évaluation** pour observer une copie du voleur sans modifier son apprentissage.
+Le dock compact reste fixé au bas de l’écran et relie trois espaces : **Mon voleur** pour choisir vue, odorat et accessoire ; **Entraînement** pour apprendre dans une salle de 8 × 6 cases ; **Évaluation** pour observer une copie du voleur sans modifier son apprentissage.
 
-Un nouveau voleur commence sans sens ni accessoire. Les réussites d’entraînement débloquent la vue (premier butin récupéré), l’odorat (première livraison), la boussole (cinq salles différentes livrées) et la loupe (trois salles avec obstacles livrées). Changer son équipement conserve les poids appris. **Voir les perceptions** montre le champ de vision, les odeurs et la direction de la boussole ; les repères grisés ne sont visibles que par le joueur.
+Un nouveau voleur commence sans sens ni accessoire. Les réussites d’entraînement débloquent la vue (premier butin récupéré), l’odorat (première livraison), la boussole (cinq salles différentes livrées) et la loupe (trois salles avec obstacles livrées). Changer son équipement conserve les poids appris. **La case avec l’œil**, dans l’en-tête de la salle, montre le champ de vision, les odeurs et la direction de la boussole ; les repères grisés ne sont visibles que par le joueur.
 
-Dans **Évaluation**, **Essayer un voleur entraîné** charge un exemple issu d’un entraînement réel. Le rythme **×16** accélère vos propres essais. Les progrès ne sont pas garantis à chaque génération ; **Évaluer sur 20 salles** permet de mesurer les livraisons sans poursuivre l’apprentissage.
+Les icônes des compteurs et les boutons d’information donnent leur explication au clic. Fermez l’aide avec **×**, **Échap** ou en cliquant ailleurs.
+
+Dans **Évaluation**, **Essayer un exemple** charge un exemple issu d’un entraînement réel. Le rythme **×16** accélère vos propres essais. Les progrès ne sont pas garantis à chaque génération ; **Évaluer sur 20 salles** permet de mesurer les livraisons sans poursuivre l’apprentissage.
 
 Le prototype contient une créature, un butin et un refuge. Les gardes et les équipes ne sont pas encore présents.
 
