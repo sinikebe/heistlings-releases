@@ -27,7 +27,7 @@ Le launcher vérifie les téléchargements avec SHA-256. Il reçoit uniquement l
 
 Le dock relie **Entraînement**, **Campagne** et **Mes voleurs**. Trois emplacements permettent de créer, sélectionner et supprimer des voleurs indépendants. Le voleur sélectionné conserve son cerveau, son expérience, ses objectifs, ses compétences et sa campagne.
 
-Choisissez ses **Objectifs d’entraînement** : ramasser, livrer, respecter une limite de pas et/ou de collisions. Chaque essai terminé qui satisfait les conditions donne **10 XP**, soit **un point à répartir dans l’arbre**. Les organes acquis restent actifs ; ils ne s’équipent plus. Loupe et boussole restent des accessoires à débloquer.
+Choisissez ses **Règles d’entraînement** : pas maximum par simulation, nombre de simulations par candidat, limite de collisions, butin et livraison obligatoires ou simplement récompensés. Réglez les poids des bonus de butin, livraison, rapidité et collisions évitées. Une règle enfreinte arrête l’essai et exclut le candidat de la sélection. Seul le score moyen pondéré départage les candidats admissibles ; le replay montre son résultat et son score. Chaque essai admissible qui atteint tous les buts récompensés avec un poids positif donne **10 XP**, soit **un point à répartir dans l’arbre**. Les organes acquis restent actifs ; ils ne s’équipent plus. Loupe et boussole restent des accessoires à débloquer.
 
 La salle affiche uniquement un replay avec son identité et sa barre de lecture : **×1, ×4 ou ×16 = 1, 4 ou 16 actions rejouées par seconde**, avec déplacements animés. Un halo signale une attente et une croix ambre une collision. Le replay va au bout, puis choisit le dernier essai terminé. Sa pause est distincte de celle de l’apprentissage.
 
