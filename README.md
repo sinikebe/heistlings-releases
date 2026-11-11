@@ -1,6 +1,6 @@
 # Heistlings — téléchargements
 
-Heistlings est un prototype où de petites créatures apprennent à récupérer un butin puis à rejoindre leur refuge. Vous équipez votre voleur, lancez son entraînement et observez ce qu’il a appris.
+Heistlings est un prototype où de petites créatures apprennent à récupérer un butin puis à rejoindre leur refuge. Vous faites grandir votre voleur, lancez son entraînement et observez ce qu’il a appris.
 
 Ce dépôt public contient les applications Windows et les fichiers de mise à jour. Les sources du jeu sont conservées dans un dépôt privé.
 
@@ -27,7 +27,11 @@ Le launcher vérifie les téléchargements avec SHA-256. Il reçoit uniquement l
 
 Le dock relie **Entraînement**, **Campagne** et **Mes voleurs**. Trois emplacements permettent de créer, sélectionner et supprimer des voleurs indépendants. Le voleur sélectionné conserve son cerveau, son expérience, ses objectifs, ses compétences et sa campagne.
 
-Choisissez ses **Règles d’entraînement** : pas maximum par simulation, nombre de simulations par candidat, limite de collisions, butin et livraison obligatoires ou simplement récompensés. Réglez les poids des bonus de butin, livraison, rapidité et collisions évitées. Une règle enfreinte arrête l’essai et exclut le candidat de la sélection. Seul le score moyen pondéré départage les candidats admissibles ; le replay montre son résultat et son score. L’entraînement ne donne plus d’XP ni de points. Le **Toucher** est gratuit dès le départ ; les nouveaux points viennent des premières réussites de campagne, une seule fois par voleur. Les organes acquis restent actifs ; ils ne s’équipent plus. Loupe et boussole restent des accessoires à débloquer.
+Choisissez ses **Règles d’entraînement** : pas maximum par simulation, nombre de simulations par candidat, limite de collisions, butin et livraison obligatoires ou simplement récompensés. Réglez les poids des bonus de butin, livraison, rapidité et collisions évitées. Une règle enfreinte arrête l’essai et exclut le candidat de la sélection. Seul le score moyen pondéré départage les candidats admissibles ; le replay montre son résultat et son score.
+
+Dans **Mes voleurs → Cerveau**, les nouveaux voleurs ont un petit réseau **2 → 2 → 4** : dernière direction et collision en entrée, deux neurones de calcul, puis quatre décisions. L’entraînement rapporte **1 XP pour 1 000 actions calculées**. Un neurone coûte **100 XP** ; achetez-le, choisissez sa couche, puis cliquez dans le dessin pour le placer. Ses connexions sont automatiques et leur influence commence à zéro pour conserver l’apprentissage. Les neurones peuvent être déplacés dans le dessin sans modifier leurs connexions. Les anciens cerveaux, la réserve et les positions sont conservés dans chaque sauvegarde. Les campagnes et les replays ne donnent pas cette XP ; les points de compétences restent séparés.
+
+Le **Toucher** est gratuit dès le départ ; les nouveaux points viennent des premières réussites de campagne, une seule fois par voleur. Les organes acquis restent actifs ; ils ne s’équipent plus. Loupe et boussole restent des accessoires à débloquer.
 
 La salle affiche uniquement un replay avec son identité et sa barre de lecture : **×1, ×4 ou ×16 = 1, 4 ou 16 actions rejouées par seconde**, avec déplacements animés. Un halo signale une attente et une croix ambre une collision. Le replay va au bout, puis choisit le dernier essai terminé. Sa pause est distincte de celle de l’apprentissage.
 
