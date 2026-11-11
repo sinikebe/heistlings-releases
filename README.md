@@ -37,6 +37,10 @@ La salle affiche uniquement un replay avec son identité et sa barre de lecture 
 
 L’apprentissage continue sur les trois écrans avec **la moitié du budget de calcul disponible par défaut**. Activez **Boost** pour utiliser le maximum disponible tout en gardant une marge pour l’interface. Ce partage porte sur le moteur de simulation ; ce n’est pas un quota global de tous les cœurs de votre PC. Les icônes expliquent leur rôle au clic et la case avec l’œil affiche les perceptions.
 
+Le panneau du réseau, à côté des replays, montre les activations à chaque étape et la commande enregistrée. Il affiche le cerveau de l’essai enregistré, même si l’entraînement a continué entre-temps. Les anciens replays sans cerveau enregistré gardent leur lecture et signalent l’absence de ces données.
+
+Ouvrez **Paramètres → Calcul de l’entraînement** : **Désactivé** utilise le CPU, **Auto** choisit le GPU après comparaison sur votre machine lorsqu’il apporte un gain, et **Forcé** le demande indépendamment de la vitesse mesurée. L’état affiché indique le moteur réellement utilisé et explique une indisponibilité. Les campagnes restent évaluées sur CPU. Le launcher proposera un nouvel exécutable pour cette version, qui introduit le calcul GPU.
+
 **Premier butin**, la campagne 1, teste la récupération du butin dans **100 salles figées de 8 × 6**, sans obstacle intérieur ni garde. Chaque salle autorise **60 actions** ; il faut **90 réussites sur 100**, sans livraison. La copie du cerveau reste identique pendant tout l’examen. La première réussite donne **un point d’arbre**, qui permet d’obtenir la **Vue niveau 1, de portée une case**. Chaque évaluation terminée dispose d’un replay à ×1, ×4 ou ×16. La campagne 2 n’est pas encore implémentée.
 
 Les anciens points non dépensés et compétences restent conservés. La réussite de l’ancien test à une salle reste historique et ne valide pas le nouvel examen. Une ancienne séance simple est conservée dans le premier emplacement. Aucun ZIP ni installation de Godot n’est nécessaire ; le guide téléchargeable avec la release détaille les commandes.
