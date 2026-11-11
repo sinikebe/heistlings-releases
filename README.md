@@ -8,6 +8,10 @@ Ce dépôt public contient les applications Windows et les fichiers de mise à j
 
 **[Télécharger Heistlings.exe — Dev](https://github.com/sinikebe/heistlings-releases/releases/download/branch-dev/Heistlings.exe)**
 
+**[Télécharger l’APK Android expérimental](https://github.com/sinikebe/heistlings-releases/releases/download/branch-android-experimental/Heistlings-Android-test.apk)**
+
+Android reçoit automatiquement les nouveautés de Dev via son propre canal de mises à jour. L’APK n’est pas testé sur téléphone ou émulateur ; son interface suit celle du jeu source.
+
 Le canal **Dev** reçoit les nouveautés pour les essayer et les valider. La version **Joueurs** sera publiée séparément après cette validation. Les deux canaux auront leurs propres mises à jour et sauvegardes.
 
 1. Enregistrez **Heistlings.exe** dans un dossier accessible en écriture, par exemple un dossier Heistlings Dev dans vos Documents.
@@ -19,7 +23,7 @@ La [page de la version dev](https://github.com/sinikebe/heistlings-releases/rele
 
 ## Mettre à jour depuis le jeu
 
-Le launcher recherche les mises à jour au démarrage. Depuis l’atelier, le bouton **Mises à jour** le rouvre en mettant la séance en pause. Vous pouvez vérifier, télécharger et installer la mise à jour proposée. Les trois voleurs sont sauvegardés automatiquement avant installation et redémarrage. Après réouverture, elle est restaurée en pause ; **Reprendre l’entraînement** poursuit la même population et le même essai. Une erreur de sauvegarde suspend la mise à jour sans fermer la séance.
+Le launcher recherche les mises à jour au démarrage et depuis le bouton **Mises à jour**. **Chaque nouvelle version Dev démarre avec de nouveaux voleurs**, sur PC et Android, pendant cette phase de prototype. Fermer et réouvrir la même version conserve la séance. Les sauvegardes automatiques de la version courante sont écrites en arrière-plan pour garder l’interface réactive.
 
 Le launcher vérifie les téléchargements avec SHA-256. Il reçoit uniquement les mises à jour du canal de votre application : Dev ou Joueurs.
 
@@ -29,7 +33,7 @@ Le dock relie **Entraînement**, **Campagne** et **Mes voleurs**. Trois emplacem
 
 Choisissez ses **Règles d’entraînement** : pas maximum par simulation, nombre de simulations par candidat, limite de collisions, butin et livraison obligatoires ou simplement récompensés. Réglez les poids des bonus de butin, livraison, rapidité et collisions évitées. Une règle enfreinte arrête l’essai et exclut le candidat de la sélection. Seul le score moyen pondéré départage les candidats admissibles ; le replay montre son résultat et son score.
 
-Dans **Mes voleurs → Cerveau**, les nouveaux voleurs ont un petit réseau **2 → 2 → 4** : dernière direction et collision en entrée, deux neurones de calcul, puis quatre décisions. L’entraînement rapporte **1 XP pour 1 000 actions calculées**. Un neurone coûte **100 XP** ; achetez-le, choisissez sa couche, puis cliquez dans le dessin pour le placer. Ses connexions sont automatiques et leur influence commence à zéro pour conserver l’apprentissage. Les neurones peuvent être déplacés dans le dessin sans modifier leurs connexions. Les anciens cerveaux, la réserve et les positions sont conservés dans chaque sauvegarde. Les campagnes et les replays ne donnent pas cette XP ; les points de compétences restent séparés.
+Dans **Mes voleurs → Cerveau**, les nouveaux voleurs ont un petit réseau **4 → 2 → 4** (22 paramètres) : quatre indicateurs de dernière direction, deux neurones de calcul et quatre décisions. Le toucher gratuit ajoute les deux entrées **Collision** et **Butin tenu**, pour un réseau **6 → 2 → 4** de 26 paramètres. Les entrées verrouillées sont absentes. L’entraînement rapporte **1 XP pour 1 000 actions calculées**. Un neurone coûte **100 XP** ; achetez-le, choisissez sa couche, puis cliquez dans le dessin pour le placer. Ses connexions sont automatiques et leur influence commence à zéro pour conserver l’apprentissage. Les neurones peuvent être déplacés dans le dessin sans modifier leurs connexions. Le cerveau, la réserve et les positions sont conservés pendant la même version. Les campagnes et les replays ne donnent pas cette XP ; les points de compétences restent séparés.
 
 Le **Toucher** est gratuit dès le départ ; les nouveaux points viennent des premières réussites de campagne, une seule fois par voleur. Les organes acquis restent actifs ; ils ne s’équipent plus. Loupe et boussole restent des accessoires à débloquer.
 
@@ -43,7 +47,7 @@ Ouvrez **Paramètres → Calcul de l’entraînement** : **Désactivé** utilise
 
 **Premier butin**, la campagne 1, teste la récupération du butin dans **100 salles figées de 8 × 6**, sans obstacle intérieur ni garde. Chaque salle autorise **60 actions** ; il faut **90 réussites sur 100**, sans livraison. La copie du cerveau reste identique pendant tout l’examen. La première réussite donne **un point d’arbre**, qui permet d’obtenir la **Vue niveau 1, de portée une case**. Chaque évaluation terminée dispose d’un replay à ×1, ×4 ou ×16. La campagne 2 n’est pas encore implémentée.
 
-Les anciens points non dépensés et compétences restent conservés. La réussite de l’ancien test à une salle reste historique et ne valide pas le nouvel examen. Une ancienne séance simple est conservée dans le premier emplacement. Aucun ZIP ni installation de Godot n’est nécessaire ; le guide téléchargeable avec la release détaille les commandes.
+L’historique garde les 100 dernières générations, puis une par dizaine, centaine, millier selon leur âge. Le meilleur cerveau et l’entraînement courant restent indépendants de cet échantillonnage. Aucun ZIP ni installation de Godot n’est nécessaire ; le guide téléchargeable avec la release détaille les commandes.
 
 ## Signaler un problème
 
