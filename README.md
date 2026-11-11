@@ -1,6 +1,6 @@
 # Heistlings — téléchargements
 
-Heistlings est un prototype où de petites créatures apprennent à récupérer un butin puis à rejoindre leur refuge. Vous faites grandir votre voleur, lancez son entraînement et observez ce qu’il a appris.
+Heistlings est un prototype où de petites créatures apprennent à explorer des salles et récupérer un butin. Vous faites grandir votre voleur, lancez son entraînement et observez ce qu’il a appris.
 
 Ce dépôt public contient les applications Windows et les fichiers de mise à jour. Les sources du jeu sont conservées dans un dépôt privé.
 
@@ -29,33 +29,27 @@ Le launcher vérifie les téléchargements avec SHA-256. Il reçoit uniquement l
 
 ## Premier essai
 
-Le dock relie **Entraînement**, **Campagne** et **Mes voleurs**. Un seul emplacement permet de créer et supprimer un voleur. Il conserve son cerveau, son expérience, ses objectifs, ses compétences et sa campagne.
+Un seul voleur est disponible. Dans **Campagne**, les cinq défis proposent des salles sans obstacle intérieur ni refuge. Les dimensions comptent les cases jouables ; une bordure s’ajoute autour. Le ramassage termine immédiatement l’essai. Les positions distinctes départ/butin sont toutes évaluées dans un ordre fixe, avec un cerveau figé par tentative.
 
-Dans le panneau de droite d’**Entraînement**, passez du **Cerveau** aux réglages d’**Entraînement**. Avant de réussir la campagne 1, seuls les actions maximum, les simulations par candidat et le **Butin** sont proposés. Le butin possède son propre **Bonus de vitesse**, fondé sur l’action exacte de ramassage ; aucun bonus de vitesse n’est gagné sans butin récompensé avec un poids positif. Préparez les valeurs avec curseurs, saisie numérique, **− / +** ou préréglages. **Appliquer** valide le brouillon ; **Annuler** retrouve les règles appliquées. Changer de vue ne valide rien. Après la première réussite, les options de livraison, collisions et les autres exercices apparaissent. Une règle enfreinte exclut le candidat ; seul le score moyen pondéré classe les admissibles. La campagne garde ses règles fixes.
+| Défi | Cases jouables | Référence / limite | Évaluations | Récompense de complétion |
+|---|---|---|---|---|
+| 1.1 | 2 × 2 | 5 / 25 actions | 12 | Toucher |
+| 1.2 | 2 × 3 | 8 / 28 | 30 | Fil d’Ariane 0 |
+| 1.3 | 4 × 3 | 24 / 44 | 132 | Fil d’Ariane 1 |
+| 1.4 | 6 × 4 et 4 × 6 | 48 / 68 | 1 104 | Fil d’Ariane 2 |
+| 1.5 | 8 × 6 | 80 / 100 | 2 256 | Un neurone en réserve |
 
-Dans la salle d’entraînement de **8 × 6 cases**, le départ et le butin peuvent apparaître sur n’importe quelle case libre intérieure. Ils sont tirés au hasard, sans direction privilégiée pour le butin. Le refuge reste dans sa bande de gauche ; les trois positions sont distinctes. Les 100 salles de campagne restent figées et suivent leurs positions enregistrées.
+La **complétion** exige 100 % de ramassages à la limite et ouvre le défi suivant. L’**efficacité** exige au moins 70 % sous le seuil de référence ; en 1.4, cette étoile s’appelle **Adaptation** et ce taux doit être atteint dans chacune des deux orientations. Le **perfect bleu** exige 100 % sous la référence. Efficacité et perfect donnent chacun **20 XP**, une seule fois par défi : 200 XP au maximum. Les cinq perfects débloquent la **Vue 0**, qui distingue mur et butin sur la case devant le voleur. Les défis rejoués conservent leurs restrictions de sens, y compris le 2 × 2 sans toucher.
 
-L’onglet **Mes voleurs → Cerveau** est grisé jusqu’à la première réussite de campagne. Les graphiques et le cerveau animé du replay restent visibles dès le départ. Les nouveaux voleurs ont un petit réseau **4 → 2 → 4** (22 paramètres) : quatre indicateurs de dernière direction, deux neurones de calcul et quatre décisions. Le toucher gratuit ajoute les deux entrées **Collision** et **Butin tenu**, pour un réseau **6 → 2 → 4** de 26 paramètres. Les entrées verrouillées sont absentes. L’entraînement rapporte **1 XP pour 10 000 000 actions calculées**. Un neurone coûte **100 XP**, soit un milliard d’actions ; achetez-le, choisissez sa couche, puis cliquez dans le dessin pour le placer. Ses connexions sont automatiques et leur influence commence à zéro pour conserver l’apprentissage. Les neurones peuvent être déplacés dans le dessin sans modifier leurs connexions. Le cerveau, la réserve et les positions sont conservés pendant la même version. Les campagnes et les replays ne donnent pas cette XP ; les points de compétences restent séparés.
+Le fil est l’unique accessoire du chapitre : niveau 0, une visite antérieure sur la case actuelle ; niveau 1, zéro/une/deux visites antérieures ou davantage ; niveau 2, traces sur les quatre voisines. Les traces repartent de zéro par simulation. Un mouvement bloqué ou une attente ne compte pas comme une entrée et ne change pas le signal de la visite actuelle. Le replay montre les traces, les perceptions et les activations du cerveau enregistré.
 
-**Charger un cerveau sauvegardé**, dans le même onglet, permet de choisir le cerveau initial, le meilleur conservé ou une génération encore archivée, puis de confirmer avec **Charger ce cerveau**. L’apprentissage repart en pause depuis des copies de ses poids, avec les neurones actuels, l’XP, les compétences et les compteurs conservés. Les connexions acquises depuis ce cerveau commencent à zéro ; l’essai incomplet et le replay d’entraînement sont abandonnés. Une campagne déjà lancée garde sa copie figée. Seuls les cerveaux conservés pour ce voleur dans la version Dev courante sont disponibles.
+L’éditeur du cerveau devient disponible dès l’accès au défi 1.3. Un neurone coûte 100 XP. Ses nouvelles connexions sortantes commencent à zéro pour conserver les décisions apprises. Les gains d’entraînement restent très lents : 1 XP par 10 millions d’actions réellement simulées ; les évaluations et replays n’en rapportent pas. Les étoiles ne peuvent pas être récoltées plusieurs fois.
 
-Le **Toucher** est gratuit dès le départ ; les nouveaux points viennent des premières réussites de campagne, une seule fois par voleur. Les organes acquis restent actifs ; ils ne s’équipent plus. Les autres branches et les accessoires apparaissent après la première campagne ; loupe et boussole restent à débloquer.
+Dans **Entraînement**, choisir le défi à préparer, puis ajuster actions, simulations, récompense de butin et vitesse dans le panneau de droite. Les changements restent en brouillon jusqu’à **Appliquer**. L’entraînement tire départ et butin sur toutes les cases libres ; les évaluations restent exhaustives et fixes. Le cerveau et les graphiques du replay sont accessibles dès le début. Les vitesses ×1/×4/×16 et les pauses de lecture restent indépendantes de l’apprentissage.
 
-La salle affiche uniquement un replay avec son identité et sa barre de lecture : **×1, ×4 ou ×16 = 1, 4 ou 16 actions rejouées par seconde**, avec déplacements animés. Un halo signale une attente et une croix ambre une collision. Le replay va au bout, puis choisit le dernier essai terminé. Son icône de pause est distincte de celle de l’apprentissage ; les infobulles indiquent leur rôle et leur état.
+Le calcul utilise 50 % du budget disponible par défaut ; l’éclair Boost demande le maximum en préservant l’interface. Les paramètres CPU/GPU proposent Désactivé, Auto et Forcé. Le calcul Vulkan utilise les mêmes visites, capteurs et salles que le CPU ; la campagne reste évaluée sur CPU. Ce partage concerne le moteur de simulation, pas un quota global de tous les cœurs du PC.
 
-Dans **Entraînement**, les onglets **Replay** et **Progression** permettent de passer de l’essai enregistré à deux graphiques : les scores d’entraînement et de validation du champion conservé, puis le nombre de candidats admissibles comme parents. Les scores viennent de salles différentes ; les admissibles ne sont pas le nombre d’élites effectivement copiées. Un repère rouge signale une génération entièrement éliminée. Affichez les 100 ou 1 000 dernières générations ou toutes celles encore conservées, puis survolez ou touchez un point pour ses détails. Les numéros de génération restent réels ; les anciennes périodes échantillonnées et les valeurs manquantes ne sont pas présentées comme des zéros ni comme un historique complet.
-
-L’apprentissage continue sur les trois écrans avec **la moitié du budget de calcul disponible par défaut**. Activez l’icône éclair **Boost** pour utiliser le maximum disponible tout en gardant une marge pour l’interface. Ce partage porte sur le moteur de simulation ; ce n’est pas un quota global de tous les cœurs de votre PC. Les icônes expliquent leur rôle au clic et la case avec l’œil affiche les perceptions.
-
-Le panneau du réseau, à côté des replays, montre les activations à chaque étape et la commande enregistrée. Il affiche le cerveau de l’essai enregistré, même si l’entraînement a continué entre-temps. Les anciens replays sans cerveau enregistré gardent leur lecture et signalent l’absence de ces données.
-
-Ouvrez **Paramètres → Calcul de l’entraînement** : **Désactivé** utilise le CPU, **Auto** choisit le GPU après comparaison sur votre machine lorsqu’il apporte un gain, et **Forcé** le demande indépendamment de la vitesse mesurée. L’état affiché indique le moteur réellement utilisé et explique une indisponibilité. Les campagnes restent évaluées sur CPU. Le launcher proposera un nouvel exécutable pour cette version, qui introduit le calcul GPU.
-
-**Premier butin**, la campagne 1, teste la récupération du butin dans **100 salles figées de 8 × 6**, sans obstacle intérieur ni garde. Chaque salle autorise **60 actions** ; il faut **90 réussites sur 100**, sans livraison. La copie du cerveau reste identique pendant tout l’examen. La première réussite donne **un point d’arbre**, qui permet d’obtenir la **Vue niveau 1, de portée une case**. Chaque évaluation terminée dispose d’un replay à ×1, ×4 ou ×16. La campagne 2 n’est pas encore implémentée.
-
-Le bouton principal passe de **Lancer** à **Pause**, **Reprendre**, puis **Nouvelle tentative** après la fin. Pendant un examen inachevé, **Recommencer les 100 salles** demande confirmation, abandonne les résultats en cours et reprend les 100 salles avec le cerveau actuellement conservé. Reprendre une tentative en pause garde son cerveau initial.
-
-L’historique garde les 100 dernières générations, puis une par dizaine, centaine, millier selon leur âge. Le meilleur cerveau et l’entraînement courant restent indépendants de cet échantillonnage. Aucun ZIP ni installation de Godot n’est nécessaire ; le guide téléchargeable avec la release détaille les commandes.
+Le [guide de premier essai](https://github.com/sinikebe/heistlings-releases/releases/download/branch-dev/README.md) décrit les récompenses et commandes. Les expériences historiques sont documentées séparément dans le dépôt de recherche privé.
 
 ## Signaler un problème
 
