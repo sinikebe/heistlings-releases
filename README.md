@@ -47,6 +47,8 @@ L’éditeur du cerveau devient disponible dès l’accès au défi 1.3. Un neur
 
 Dans **Entraînement**, choisir le défi à préparer, puis ajuster actions, simulations, récompense de butin et vitesse dans le panneau de droite. Les changements restent en brouillon jusqu’à **Appliquer**. L’entraînement tire départ et butin sur toutes les cases libres ; les évaluations restent exhaustives et fixes. Le cerveau et les graphiques du replay sont accessibles dès le début. Les vitesses ×1/×4/×16 et les pauses de lecture restent indépendantes de l’apprentissage.
 
+Quand une boucle est prouvée, le replay s’arrête plus tôt et affiche **Boucle détectée** avant de passer au suivant. Le résultat et le nombre d’actions comptabilisées restent ceux de la simulation complète.
+
 Le calcul utilise 50 % du budget disponible par défaut ; l’éclair Boost demande le maximum en préservant l’interface. Les paramètres CPU/GPU proposent Désactivé, Auto et Forcé. Le calcul Vulkan utilise les mêmes visites, capteurs et salles que le CPU ; la campagne reste évaluée sur CPU. Ce partage concerne le moteur de simulation, pas un quota global de tous les cœurs du PC.
 
 Le [guide de premier essai](https://github.com/sinikebe/heistlings-releases/releases/download/branch-dev/README.md) décrit les récompenses et commandes. Les expériences historiques sont documentées séparément dans le dépôt de recherche privé.
