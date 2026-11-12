@@ -29,6 +29,8 @@ Le launcher vérifie les téléchargements avec SHA-256. Il reçoit uniquement l
 
 ## Premier essai
 
+Ouvrez **Campagne**, puis choisissez un défi débloqué sur la carte. Sa fiche présente les règles, les capteurs, les trois étoiles et leurs récompenses. **Lancer la mission** ouvre les évaluations et les replays. Pendant la mission, **Détails** rouvre la fiche ; **Carte** permet de parcourir les défis sans perdre la tentative. Changer effectivement de défi se fait au lancement, avec confirmation si une tentative reste inachevée.
+
 Un seul voleur est disponible. La **campagne 1** propose cinq défis sans obstacle intérieur ni refuge. Les dimensions comptent les cases jouables ; une bordure s’ajoute autour. Le ramassage termine immédiatement l’essai. Les positions distinctes départ/butin sont toutes évaluées dans un ordre fixe, avec un cerveau figé par tentative.
 
 | Défi | Cases jouables | Référence / limite | Évaluations | Récompense de complétion |
