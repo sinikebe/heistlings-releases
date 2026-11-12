@@ -57,6 +57,8 @@ Le fil est l’unique accessoire du chapitre : niveau 0, une visite antérieure 
 
 L’éditeur du cerveau devient disponible dès l’accès au défi 1.3. Un neurone coûte 100 XP. Ses nouvelles connexions sortantes commencent à zéro pour conserver les décisions apprises. Les gains d’entraînement restent très lents : 1 XP par 10 millions d’actions réellement simulées ; les évaluations et replays n’en rapportent pas. Les étoiles ne peuvent pas être récoltées plusieurs fois.
 
+Dans cet éditeur, sélectionnez une entrée, un calcul ou une sortie puis utilisez **Actif** pour la désactiver ou la réactiver. Les éléments désactivés sont grisés et leurs paramètres restent conservés pendant l’entraînement. Au moins une direction reste active. La campagne affiche l’origine du cerveau évalué — génération et individu — et conserve cette identité pendant toute la tentative.
+
 Dans **Entraînement**, choisir le défi à préparer, puis ajuster actions, simulations, récompense de butin et vitesse dans le panneau de droite. Les défis de campagne 2 permettent aussi de **Limiter les collisions**, notamment à zéro pour préparer leurs étoiles secondaires. Les changements restent en brouillon jusqu’à **Appliquer**. L’entraînement tire départ et butin sur toutes les cases libres des mêmes plans ; les évaluations restent exhaustives et fixes. Le cerveau et les graphiques du replay sont accessibles dès le début. Les vitesses ×1/×4/×16 et les pauses de lecture restent indépendantes de l’apprentissage.
 
 Quand une boucle est prouvée, le replay s’arrête plus tôt et affiche **Boucle détectée** avant de passer au suivant. Le résultat et le nombre d’actions comptabilisées restent ceux de la simulation complète.
@@ -64,6 +66,8 @@ Quand une boucle est prouvée, le replay s’arrête plus tôt et affiche **Bouc
 Dans **Paramètres**, activez **Afficher les statistiques** pour suivre la fluidité et le débit d’apprentissage. Les valeurs sont colorées et accompagnées de statuts. Dépliez la barre pour garder une **Référence**, **Réinitialiser mesure** et **Copier le rapport** à joindre à un retour de test. Les références restent locales ; les comparaisons de débit exigent des conditions équivalentes. Les mesures indisponibles sont affichées en gris.
 
 Les graphiques de **Progression** conservent les anciennes générations en bougies : première valeur, maximum, minimum et dernière valeur de chaque intervalle. Les extrêmes et les éliminations restent présents même après regroupement. Survolez ou touchez une bougie pour lire sa plage et ses détails ; les scores indisponibles ne sont jamais remplacés par zéro.
+
+La vue **Mutations**, à droite du replay, règle le taux et l’amplitude des changements entre générations. Le mode classique est conservé par défaut. En activant l’adaptation au score, les parents admissibles à la cible donnent des copies sans mutation ; plus leur moyenne d’entraînement est éloignée de la cible, plus le taux augmente, jusqu’au maximum choisi. Les réglages s’appliquent à la prochaine reproduction sans réinitialiser l’apprentissage. Leur brouillon est sauvegardé séparément des règles de simulation.
 
 Le calcul utilise 50 % du budget disponible par défaut ; l’éclair Boost demande le maximum en préservant l’interface. Les paramètres CPU/GPU proposent Désactivé, Auto et Forcé. Le calcul Vulkan utilise les mêmes visites, capteurs et salles que le CPU ; la campagne reste évaluée sur CPU. Ce partage concerne le moteur de simulation, pas un quota global de tous les cœurs du PC.
 
